@@ -5,6 +5,8 @@ import "./lib/ManagerString.sol";
 import "./lib/MerkleProof.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
+import "hardhat/console.sol";
+
 interface IERC20 {
     function transferFrom(
         address sender,
@@ -156,6 +158,10 @@ contract DataContract is AutherController {
         bytes32[] memory merkleProof
     ) public view returns (bool flag) {
         bytes32 leaf = hash(_address, credit);
+
+        console.log("leaf is : ");
+        console.logBytes32(leaf);
+        
         flag = MerkleProof.verify(merkleProof, merkleRoot, leaf);
     }
 

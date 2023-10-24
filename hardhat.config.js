@@ -33,6 +33,13 @@ module.exports = {
       ],
     },
 
+    celo: {
+      url: `https://rpc.ankr.com/celo`,
+      accounts: [
+        "a6392433fe30f2bf8564228240eddd41c7ad12ab5332438254054896790ceebe"
+      ],
+    },
+
     local: {
       url: `http://127.0.0.1:6111`,
       accounts: [
@@ -41,7 +48,7 @@ module.exports = {
     },
 
     hardhat:{
-      chainId:100,
+      chainId:21,
       accounts: [
         {privateKey:"0xcb93f47f4ae6e2ee722517f3a2d3e7f55a5074f430c9860bcfe1d6d172492ed0",balance:"10000000000000000000000"},
         {privateKey:"0xf143b04240e065984bc0507eb1583234643d64c948e1e0ae2ed4abf7d7aed06a",balance:"10000000000000000000000"},
